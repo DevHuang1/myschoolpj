@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ProjectWebFlow</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link src="Tailwind.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Orbitron:wght@400..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+        height: 330vh;
+      }
+      .searchbar {
+        background: local;
+      }
+
+      .Btn {
+        background-color: local;
+        border: 1px solid black;
+        border-radius: 0.5rem;
+        box-sizing: border-box;
+        color: #111827;
+        font-family: "Inter var", ui-sans-serif, system-ui, -apple-system,
+          system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans",
+          sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+          "Noto Color Emoji";
+        font-size: 0.875rem;
+        font-weight: 600;
+
+        padding: 0.75rem 1rem;
+        text-align: center;
+        text-decoration: none #d1d5db solid;
+        text-decoration-thickness: auto;
+        box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+        cursor: pointer;
+      }
+
+      .Btn:hover {
+        background-color: rgb(249, 250, 251);
+      }
+
+      .Btn:focus {
+        outline: 2px solid transparent;
+        outline-offset: 2px;
+      }
+
+      .button-39:focus-visible {
+        box-shadow: none;
+      }
+
+      .slider {
+        font-family: "Orbitron", sans-serif;
+        color: var(text-gray-500);
+        font-weight: 800;
+        font-style: normal;
+        animation: loopText 8s infinite linear;
+        font-optical-sizing: auto;
+        opacity: 100%;
+      }
+      @keyframes loopText {
+        from {
+          transform: translateX(0%);
+        }
+        to {
+          transform: translateX(-30%);
+        }
+      }
+      .Info-container {
+        z-index: 1000;
+      }
+      .grid-container {
+        display: grid;
+        gap: 10px;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        box-sizing: border-box;
+      }
+      .grid-container > div {
+        height: 100%;
+        width: 100%;
+      }
+      .Info1 {
+        z-index: 1000;
+      }
+      .Info2 {
+        z-index: 1000;
+      }
+      .container-2 {
+        display: grid;
+        gap: 10px;
+        grid-template-columns: repeat(10, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+        box-sizing: border-box;
+        width: 220vw;
+        height: 45vh;
+        gap: 20px;
+        z-index: 1000;
+      }
+      .container-2 > div {
+        height: 100%;
+        width: 100%;
+      }
+
+      .Boxcontainer1 {
+        animation: slider 8s infinite linear;
+      }
+      @keyframes slider {
+        from {
+          transform: translateX(0%);
+        }
+        to {
+          transform: translateX(-50%);
+        }
+      }
+      .infoh1 {
+        font-family: "Playfair Display", serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+        z-index: 1000;
+      }
+      .third-page {
+        z-index: 1000;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      class="Navbar-container container mx-auto h-[70px] flex justify-between py-8 border-b-[1px] border-b-black sticky top-0"
+    >
+      <div
+        class="flex items-center Nav-container ml-[30px] gap-[10px] text-xl font-semibold italic lg:gap-[7px] lg:text-sm"
+      >
+        <img
+          class="w-14 h-14 lg:w-12 lg:h-12"
+          src="images-removebg-preview.png"
+        />
+        <p class="">Aung San Thuriya Hla Thaung</p>
+      </div>
+      <div class="Nav-info lg:flex hidden items-center">
+        <ul
+          class="flex gap-[105px] font-medium text-gray-500 italic lg:gap-[80px]"
+        >
+          <li class="text-base">
+            <a href="#">Home</a>
+          </li>
+          <li class="text-base">
+            <a href="#">Pages</a>
+          </li>
+          <li class="text-base">
+            <a href="#">About</a>
+          </li>
+          <li class="text-base">
+            <a href="#">Contact</a>
+          </li>
+        </ul>
+      </div>
+      <div class="flex items-center gap-[25px]">
+        <input
+          class="text-sm w-60 h-9 ml-30px searchbar border-b-[1px] border-b-black outline-none translate-x-[48px] sm:flex hidden"
+          input="text"
+          placeholder="Enter your text"
+        />
+        <svg
+          class=""
+          xmlns="http://www.w3.org/2000/svg"
+          width="25"
+          height="25"
+          viewBox="0 0 24 24"
+        >
+          <path
+            fill="none"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-miterlimit="10"
+            stroke-width="1.5"
+            d="m21 21l-4-4m2-6a8 8 0 1 1-16 0a8 8 0 0 1 16 0"
+          />
+        </svg>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="32"
+          height="32"
+          viewBox="0 0 24 24"
+        >
+          <path
+            fill="currentColor"
+            d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10s10-4.48 10-10S17.52 2 12 2m0 4c1.93 0 3.5 1.57 3.5 3.5S13.93 13 12 13s-3.5-1.57-3.5-3.5S10.07 6 12 6m0 14c-2.03 0-4.43-.82-6.14-2.88a9.95 9.95 0 0 1 12.28 0C16.43 19.18 14.03 20 12 20"
+          />
+        </svg>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="32"
+          height="32"
+          viewBox="0 0 24 24"
+        >
+          <path fill="currentColor" d="M3 3h18v2H3zm0 16h18v2H3zm0-8h18v2H3z" />
+        </svg>
+      </div>
+    </div>
+    <div class="container mx-auto overflow-hidden sticky top-[70px]">
+      <div
+        class="text-lg font-medium italic tracking-[10px] md:flex hidden items-center gap-[40px] w-[150vw] slider md:w-[140vw] md:text-sm md:tracking-[7.5px] md:gap-[30px]"
+      >
+        <h1 class="">Aung San Thuriya Hla Thaung Official</h1>
+
+        <h1 class="">Aung San Thuriya Hla Thaung Official</h1>
+        <h1 class="">Aung San Thuriya Hla Thaung Official</h1>
+      </div>
+    </div>
+
+    <div
+      class="container flex mx-auto items-center justify-center gap-[30px] border-b-black border-b-[1px] h-[80vh] Info-container"
+    >
+      <h1
+        class="md:flex hidden top-[20px] height-[100%] text-[250px] font-black absolute items-center opacity-5 bg-text"
+      >
+        Aung San
+      </h1>
+      <h1
+        class="md:flex hidden top-[600px] height-[100%] text-[50px] font-extrabold opacity-5 absolute bg-text w-[50vw] left-[400px] justify-center items-center h-[30vb]"
+      >
+        Thuriya Hla Thaung
+      </h1>
+
+      <div class="text-start">
+        <div class="flex opacity-50">
+          <p class="text-sm">Official</p>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+          >
+            <path
+              fill="currentColor"
+              d="M9 16.2L4.8 12l-1.4 1.4L9 19L21 7l-1.4-1.4z"
+            />
+          </svg>
+        </div>
+        <h1 class="text-[30px] font-semibold">
+          Welcome To Aung San Thuriya Hla Thaung Official Website
+        </h1>
+        <p>
+          When you are here, you can explore the history and we provided some
+          information for you to know
+        </p>
+        <div class="mt-[40px] flex gap-[40px] justify-center">
+          <button class="Btn">Get Started</button>
+          <button class="Btn">Learn More</button>
+        </div>
+      </div>
+
+      <div class="w-[500px] h-[500px] flex items-center img">
+        <img class="rounded-lg" src="2_dsc_7857.jpg" />
+      </div>
+    </div>
+    <div class="h-[100vh]">
+      <div
+        class="lg:flex hidden md:flex hidden top-[900px] height-[100%] text-[250px] font-black absolute items-center opacity-5 bg-text mx-auto left-[200px]"
+      >
+        <h1>No.1</h1>
+      </div>
+      <div
+        class="flex mx-auto items-center justify-center h-[50vh] border-b-black border-b-[1px] gap-[70px] w-[90vw]"
+      >
+        <div class="Info1">
+          <h1 class="text-[25px] font-bold">
+            Basic Facts that every student of Aung San Thuriya Hla Thaung School
+            Must Have
+          </h1>
+          <p>A signboard that shows the basic facts</p>
+        </div>
+
+        <div class="w-[400px] h-[500px] flex items-center">
+          <img class="rounded-lg" src="dsc_7966.jpg" />
+        </div>
+      </div>
+
+      <div
+        class="container mx-auto flex items-center justify-center w-[90vw] h-[49vh] gap-[30px] border-b-black border-b-[1px]"
+      >
+        <div class="grid-container h-[35vb] w-[50vw] lg:h-[28vb] md:h-[17vb]">
+          <div class="w-[240px] h-[200px]">
+            <img
+              class="rounded-lg"
+              src="Screenshot 2024-10-13 at 23.38.46.png"
+            />
+          </div>
+          <div class="row-span-2">
+            <img
+              class="rounded-lg"
+              src="Screenshot 2024-10-13 at 23.39.17.png"
+            />
+          </div>
+
+          <div class="w-[240px] h-[200px]">
+            <img
+              class="rounded-lg"
+              src="Screenshot 2024-10-13 at 23.39.42.png"
+            />
+          </div>
+        </div>
+        <div class="text-end Info-2">
+          <h1 class="text-[25px] font-bold">
+            Students at the Aung San Thuriya Hla Thaung cantonment school in
+            Yangon Mingaladon Township
+          </h1>
+          <p>
+            IT IS NOT widely known that throughout the country there are schools
+            where the students gather regularly before class in their green and
+            white uniforms to sing the National Anthem before a military
+            officer.
+          </p>
+        </div>
+        <div
+          class="md:flex hidden top-[1450px] height-[100%] text-[160px] font-black absolute items-center opacity-5 bg-text mx-auto right-[80px]"
+        >
+          <h1>
+            <h1>High School</h1>
+          </h1>
+        </div>
+      </div>
+      <div
+        class="h-[100vh] w-[90vw] container mx-auto flex items-center justify-center bg-local border-b-[1px] border-b-black third-page"
+      >
+        <div
+          class="md:flex hidden top-[1850px] height-[100%] width-[100%] text-[190px] font-[1000] opacity-5 absolute bg-text w-[60vw] left-[50px] justify-center items-center h-[30vb] tracking-[20px]"
+        >
+          <h1>Fun</h1>
+        </div>
+        <div
+          class="md:flex hidden top-[2550px] height-[100%] width-[100%] text-[190px] font-[1000] opacity-5 absolute bg-text w-[50vw] left-[50px] justify-center items-center h-[30vb] tracking-[20px] md:font-[800]"
+        >
+          <h1>Activities</h1>
+        </div>
+        <div
+          class="items-center justify-center mx-auto container overflow-hidden infothird z-50"
+        >
+          <h1
+            class="flex text-[45px] font-extrabold tracking-[1px] items-center justify-center infoh1 md:text-[40px]"
+          >
+            "Events that take place every year"
+          </h1>
+
+          <p
+            class="flex text-[15px] font-bold tracking-[1px] items-center justify-center mb-[100px]"
+          >
+            Some of the events can be activities, festivals including thadingyut
+          </p>
+          <div class="container mx-auto Boxcontainer1 slider z-50">
+            <div
+              class="grid container-2 mx-auto slider z-50 lg:h-[350px] md:h-[300px]"
+            >
+              <div
+                class="container border-black border-[1px] rounded-[50px] overflow-hidden"
+              >
+                <img
+                  class="w-[400px] h-[400px] lg:h-[300px] md:h-[250px]"
+                  src="2E6W4M6-1-1367x2048.jpg"
+                />
+                <p class="text-center">Thadingyut Festival</p>
+              </div>
+              <div
+                class="container border-black border-[1px] rounded-[50px] overflow-hidden"
+              >
+                <img
+                  class="w-[400px] h-[400px] lg:h-[300px] md:h-[250px]"
+                  src="images (1).jpeg"
+                />
+                <p class="text-center">Football cups</p>
+              </div>
+              <div
+                class="container border-black border-[1px] rounded-[50px] overflow-hidden"
+              >
+                <img
+                  class="w-[400px] h-[400px] lg:h-[300px] md:h-[250px]"
+                  src="images (2).jpeg"
+                />
+                <p class="text-center">Sone Nyi Pwl Taw</p>
+              </div>
+              <div
+                class="container border-black border-[1px] rounded-[50px] overflow-hidden"
+              >
+                <img
+                  class="w-[400px] h-[400px] lg:h-[300px] md:h-[250px]"
+                  src="images (1) copy.jpeg"
+                />
+                <p class="text-center">Extracurricular activities</p>
+              </div>
+              <div
+                class="container border-black border-[1px] rounded-[50px] overflow-hidden"
+              >
+                <img
+                  class="w-[400px] h-[400px] lg:h-[300px] md:h-[250px]"
+                  src="images 4.jpeg"
+                />
+                <p class="text-center">Celebration Show</p>
+              </div>
+
+              <div
+                class="container border-black border-[1px] rounded-[50px] overflow-hidden"
+              >
+                <img
+                  class="w-[400px] h-[400px] lg:h-[300px] md:h-[250px]"
+                  src="2E6W4M6-1-1367x2048.jpg"
+                />
+
+                <p class="text-center">Thadingyut Festival</p>
+              </div>
+              <div
+                class="container border-black border-[1px] rounded-[50px] overflow-hidden"
+              >
+                <img
+                  class="w-[400px] h-[400px] lg:h-[300px] md:h-[250px]"
+                  src="images (1).jpeg"
+                />
+                <p class="text-center">Football cups</p>
+              </div>
+              <div
+                class="container border-black border-[1px] rounded-[50px] overflow-hidden"
+              >
+                <img
+                  class="w-[400px] h-[400px] lg:h-[300px] md:h-[250px]"
+                  src="images (2).jpeg"
+                />
+                <p class="text-center">Sone Nyi Pwl Taw</p>
+              </div>
+              <div
+                class="container border-black border-[1px] rounded-[50px] overflow-hidden"
+              >
+                <img
+                  class="w-[400px] h-[400px] lg:h-[300px] md:h-[250px]"
+                  src="images (1) copy.jpeg"
+                />
+                <p class="text-center">Extracurricular activities</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
